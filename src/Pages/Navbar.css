@@ -1,0 +1,15 @@
+.middle {
+    align-items: center;
+    display: flex;
+    
+}
+.a,
+.b,
+.c,
+.d {
+    margin-right: 20px;
+
+}
+.Resume{
+    padding-right: 15px;
+}
