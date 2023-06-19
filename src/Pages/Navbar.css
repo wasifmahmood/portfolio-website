@@ -1,8 +1,11 @@
 .Navbar {
     box-shadow: 2px 2px 2px 2px gray;
-    padding-left: 50px;
+    padding-left: 20px;
+    display: block;
 }
-
+.logo{
+    padding-left: 10px;
+}
 .middle {
     align-items: center;
     display: flex;
@@ -13,20 +16,26 @@
 .c,
 .d {
     margin-right: 20px;
+    
 
 }
 
-.Resume {
+/* .Resume {
     padding-right: 15px;
 
+} */
+/* .menu {
+    display:none ;
+} */
+.drawer-data.a.b.c.d{
+    padding-top: 10px;
 }
-
 
 
 @media (min-width:760px) {
-    .menu {
+    /* .menu {
         display:none ;
-    }
+    } */
 }
 
 @media (max-width: 360px) {
@@ -43,5 +52,8 @@
     .my-resume {
         display: none;
     }
+    /* .drawer-data{
+        
+    } */
 
 }
