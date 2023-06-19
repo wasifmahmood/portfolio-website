@@ -1,0 +1,23 @@
+.about{
+    padding-top: 4rem;
+}
+.detail{
+    flex: 4;
+    text-align: justify;
+    padding-top: 4rem;
+
+}
+.pic{
+    flex: 3;
+    padding-top: 1rem;
+   
+
+}
+.desgination{
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+}
+.description{
+    font-size: 14px;
+
+}

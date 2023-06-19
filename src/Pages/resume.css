@@ -1,0 +1,41 @@
+.Resume {
+    /* color:white; */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+}
+
+.container {
+    display: flex;
+    padding-top: 4rem;
+    text-align: justify;
+    gap: 20px;
+    padding-bottom: 4rem;
+
+}
+
+.card {
+    flex: 2;
+    padding: 2rem;
+    max-height: 80vh;
+}
+
+.tech {
+    flex-direction: column;
+    padding: 0px 50px 0px 50px   ;
+  
+}
+
+.text {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-weight: bold;
+    padding-bottom: 4rem;
+
+}
+.icon,.icontext{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: space-between;
+}

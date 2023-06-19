@@ -1,6 +1,12 @@
-.about{
-    width: 50%;
+.home{
+    /* background-color: gray; */
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
-.pic{
-    width: 50%;
+@media (max-width: 360px) {
+   .home{
+    padding: 1rem;
+   }
 }

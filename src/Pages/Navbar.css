@@ -1,8 +1,13 @@
+.Navbar {
+    box-shadow: 2px 2px 2px 2px gray;
+    padding-left: 50px;
+}
+
 .middle {
     align-items: center;
     display: flex;
-    
 }
+
 .a,
 .b,
 .c,
@@ -10,6 +15,33 @@
     margin-right: 20px;
 
 }
-.Resume{
+
+.Resume {
     padding-right: 15px;
+
+}
+
+
+
+@media (min-width:760px) {
+    .menu {
+        display:none ;
+    }
+}
+
+@media (max-width: 360px) {
+    .Navbar {
+        height: 60%;
+    }
+
+    .logo.img {
+        width: 10px;
+        height: 5px;
+    }
+
+    .middle,
+    .my-resume {
+        display: none;
+    }
+
 }
