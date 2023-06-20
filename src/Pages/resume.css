@@ -1,5 +1,4 @@
 .Resume {
-    /* color:white; */
     padding-top: 4rem;
     padding-bottom: 4rem;
 
@@ -18,12 +17,13 @@
     flex: 2;
     padding: 2rem;
     max-height: 80vh;
+
 }
 
 .tech {
     flex-direction: column;
-    padding: 0px 50px 0px 50px   ;
-  
+    padding: 0px 50px 0px 50px;
+
 }
 
 .text {
@@ -33,9 +33,61 @@
     padding-bottom: 4rem;
 
 }
-.icon,.icontext{
+.icon {
     display: flex;
-    flex:1;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .item span {
+    color: #213b52;
+    font-weight: bold;
+  }
+  
+/* .icon {
+    display: flex;
+    flex: 1;
     flex-direction: row;
     justify-content: space-between;
+} */
+
+@media (max-width: 360px) {
+    .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card {
+        max-height: none;
+    }
+
+    .tech {
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+        padding: 0px 20px;
+    }
+
+    .text {
+        text-align: center;
+    }
+    .item{
+        width: 30%;
+    }
+
+    .icon {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* gap:20px; */
+
+    }
 }

@@ -8,27 +8,27 @@ const Contact = () => {
   return (
     <div className="Contact" >
       <div className='heading'>
-        <h3 style={{ fontWeight:'bold' }}>Contact me</h3>
-        <h2 style={{ color: 'orange', paddingTop: '4rem', paddingBottom: '4rem' }}>What did you have for me?</h2><br></br>
+        <h3 style={{ fontWeight: 'bold' }}>Contact me</h3>
+        <h2 style={{ color: 'orange', paddingTop: '10px' }}>What did you have for me?</h2><br></br>
       </div>
       <div className='footer d-flex'>
-        <div className='left col-5' style={{ paddingRight: '20px' }}>
-          <div>
-            <h3 style={{ color: '#213b52' }}  >Get a questionor perposal,or just want to say Hello?Please go ahead</h3>
+        <div className='left' >
+          <div className='header'>
+            <span >Get a question or perposal, or just want to say Hello? Please go ahead</span>
           </div>
-          <div  style={{ paddingTop: '50px' }}>
+          <div className='email' >
             <span><MdEmail size={30} style={{ color: 'orange' }} /></span>
-            <span style={{ padding: '55px', color: '#213b52', fontWeight: 'bold' }}>wasifarain057@gmail.com</span></div>
-          <div style={{ paddingTop: '30px' }}>
+            <span className='f-text' >wasifarain057@gmail.com</span></div>
+          <div className='address' >
             <span><ImLocation2 size={30} style={{ color: 'orange' }} /></span>
-            <span style={{ paddingLeft: '55px', color: '#213b52', fontWeight: 'bold' }}>Lahore,Pakistan</span>
+            <span className='f-text' >Lahore,Pakistan</span>
           </div>
-          <div style={{ paddingTop: '30px' }}>
+          <div className='phone' >
             <span><MdSettingsPhone size={30} style={{ color: 'orange' }} /></span>
-            <span style={{ paddingLeft: '55px', color: '#213b52', fontWeight: 'bold' }}>+92 301-3963678</span>
+            <span className='f-text' >+92 301-3963678</span>
           </div>
         </div>
-        <div className='form right col-5'>
+        <div className='form right'>
           <form>
             <label style={{ color: 'orange', marginBottom: '10px' }}>Full Name</label><br></br>
             <TextField id="Name" label="Enter Your Full Name" variant="standard" color='warning' /><br></br>

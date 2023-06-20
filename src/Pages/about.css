@@ -1,23 +1,61 @@
-.about{
+.About {
     padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
 }
-.detail{
+
+.detail {
     flex: 4;
     text-align: justify;
     padding-top: 4rem;
 
 }
-.pic{
+
+.pic {
     flex: 3;
     padding-top: 1rem;
-   
+
 
 }
-.desgination{
-    padding-top:1.5rem;
-    padding-bottom:1.5rem;
+.image{
+    width: 70%;
+    
 }
-.description{
+
+.desgination {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.description {
     font-size: 14px;
+    font-family: bold;
 
+}
+
+@media (max-width:360px) {
+    .About {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .pic {
+        order: -1;
+
+    }
+    /* .image{
+        width: 70%;
+        
+    } */
+    
+    .detail {
+        text-align: justify;
+        padding-top: 0px;
+
+    }
+
+    /* .description {
+        font-size: normal;
+
+    } */
 }

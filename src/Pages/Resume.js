@@ -1,16 +1,15 @@
 import './resume.css';
 import { SiHtml5 } from 'react-icons/si';
-import { FaCss3Alt, FaJava, FaNode, FaReact, FaGithub, FaNodeJs } from 'react-icons/fa';
-import { DiGithubFull, DiJavascript1 } from 'react-icons/di';
-import { MdOutlineCss, MdOutlineHtml } from 'react-icons/md';
+import { FaCss3Alt, FaJava, FaReact, FaGithub, FaNodeJs } from 'react-icons/fa';
+
 
 const Resume = () => {
   return (
     <div className="Resume" >
-      <h3 style={{ fontWeight:'bold' }}>Experience</h3>
+      <h3 style={{ fontWeight: 'bold' }}>Experience</h3>
       <div className='container' >
-        <div className='card' >
-          <h2>Techlift Bootcamp Trainee</h2>
+        <div className='card' style={{ backgroundColor: '#cdd9fc', borderColor: 'orange' }}>
+          <h3>Techlift Bootcamp Trainee</h3>
           <span style={{ color: 'orange' }}>Mern Stack Developer</span>
           <span style={{ color: 'orange' }}>(Oct2022-Jan2023)</span><br></br>
           <p style={{ fontSize: '14px', color: '#213b52' }}>
@@ -29,7 +28,7 @@ const Resume = () => {
             • Communication Skills(verbal and written)<br></br>
           </p>
         </div>
-        <div className='card'>
+        <div className='card' style={{ backgroundColor: '#cdd9fc', borderColor: 'orange' }}>
           <h3>Cybex Solution</h3>
           <span style={{ color: 'orange' }}>REACT-JS Forntend Developer</span>
           <span style={{ color: 'orange' }}>(Mar2023-Present)</span><br></br>
@@ -42,27 +41,46 @@ const Resume = () => {
           </p>
         </div>
       </div>
-      <hr className="solid-line" style={{ color: 'orange',border:'2px solid' }} ></hr>
+      <hr className="solid-line" style={{ color: 'orange', border: '2px solid' }} ></hr>
       <div className='tech'>
         <div className='text'>
-          <h3 style={{ fontWeight:'bold' }}>Technology</h3>
+          <h3 style={{ fontWeight: 'bold' }}>Technology</h3>
         </div>
-        <div className='icon' style={{ color: 'orange' }}>
-          <div><SiHtml5 size={50} /></div>
-          <div><FaCss3Alt size={50} /></div>
-          <div><FaJava size={50} /></div>
-          <div><FaNodeJs size={50} /></div>
-          <div><FaReact size={50} /></div>
-          <div><FaGithub size={50} /></div>
-        </div >
-        <div className='icontext' >
+        <div className='icon '>
+          <div className='item '>
+            <SiHtml5 size={50} style={{ color: 'orange' }} />
+            <span>HTML</span>
+          </div>
+          <div className='item'>
+            <FaCss3Alt size={50} style={{ color: 'orange' }} />
+            <span>CSS</span>
+          </div>
+          <div className='item'>
+            <FaJava size={50} style={{ color: 'orange' }} />
+            <span>JavaScript</span>
+          </div>
+          <div className='item'>
+            <FaNodeJs size={50} style={{ color: 'orange' }} />
+            <span>Node-JS</span>
+          </div>
+          <div className='item'>
+            <FaReact size={50} style={{ color: 'orange' }} />
+            <span>React-JS</span>
+          </div>
+          <div className='item'>
+            <FaGithub size={50} style={{ color: 'orange' }} />
+            <span>GitHub</span>
+          </div>
+        </div>
+
+        {/* <div className='icontext' >
           <div><MdOutlineHtml size={50} /></div>
           <div><MdOutlineCss size={50} /></div>
           <div><DiJavascript1 size={40} /></div>
           <div><FaNode size={50} /></div>
-          <div style={{ fontWeight: 'bold', paddingTop: '10px' }}>React</div>
-          <div><DiGithubFull size={50} /></div>
-        </div>
+            <div style={{ fontWeight: 'bold', paddingTop: '10px' }}>React</div>
+            <div><DiGithubFull size={50} /></div>
+        </div> */}
       </div>
     </div >
   );

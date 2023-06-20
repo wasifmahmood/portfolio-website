@@ -10,24 +10,24 @@ import Contact from './Contact'
 const Home = () => {
   return (
     <div className='home '>
-      <div className="" >
+      <div className="header" id='header' >
         <Navbar />
       </div>
-      {/* <div className='about'>
+      <div className='about' id='about'>
         <About />
       </div>
-      <div className='resume'>
+      <div className='resume'id='resume'>
         <Resume />
       </div>
-      <div className='portfolio'>
+      <div className='portfolio'id='portfolio'>
         <Portfolio />
       </div>
-      <div className='education'>
+      <div className='education'id='education'>
         <Education />
       </div>
-      <div className='contact'>
+      <div className='contact'id='contact'>
         <Contact />
-      </div> */}
+      </div>
       
     </div>
 

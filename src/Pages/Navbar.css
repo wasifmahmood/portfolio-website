@@ -2,13 +2,36 @@
     box-shadow: 2px 2px 2px 2px gray;
     padding-left: 20px;
     display: block;
+
 }
-.logo{
+
+.logo {
     padding-left: 10px;
 }
+
 .middle {
     align-items: center;
     display: flex;
+    font-Weight: bold;
+}
+
+.middle span {
+    margin: 0 10px;
+}
+
+.middle span a {
+    color: #213b52;
+    text-decoration: none;
+
+}
+
+.middle span a:hover {
+    color: orange;
+}
+
+.middle span.active a {
+    color: orange;
+    font-weight: bold;
 }
 
 .a,
@@ -16,31 +39,28 @@
 .c,
 .d {
     margin-right: 20px;
-    
-
 }
 
-/* .Resume {
-    padding-right: 15px;
 
-} */
-/* .menu {
-    display:none ;
-} */
-.drawer-data.a.b.c.d{
+.my-resume {
+    padding-right: 10px;
+}
+
+.drawer-data.a.b.c.d {
     padding-top: 10px;
 }
 
 
-@media (min-width:760px) {
-    /* .menu {
-        display:none ;
-    } */
+@media (min-width:768px) {
+    .menubtn {
+        display: none;
+        /* visibility: hidden; */
+    }
 }
 
 @media (max-width: 360px) {
     .Navbar {
-        height: 60%;
+        height: 20%;
     }
 
     .logo.img {
@@ -52,8 +72,5 @@
     .my-resume {
         display: none;
     }
-    /* .drawer-data{
-        
-    } */
 
 }

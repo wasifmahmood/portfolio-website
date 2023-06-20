@@ -1,6 +1,5 @@
 import Logow from '../image/Logow.png'
 import { FaDownload } from 'react-icons/fa';
-import { FcAbout } from 'react-icons/fc';
 import { CgMenuMotion } from 'react-icons/cg';
 import './Navbar.css';
 import React, { useState } from "react";
@@ -8,12 +7,10 @@ import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const handleClick = () => {
-    setOpen(true);
-  }
   const [state, setState] = React.useState({
     right: false,
   });
@@ -31,9 +28,9 @@ const Navbar = () => {
       onKeyDown={topDrawer(anchor, false)}
     >
       <List>
-        <div className="drawer-data " onClick={handleClick} style={{ padding: '40px' }}>
-          <span className="a" style={{ color: 'orange', fontWeight: 'bold' }}>About me<FcAbout/></span><br></br>
-          <span className="b" style={{ color: '#213b52', fontWeight: 'bold' }}>Resume</span><br></br>
+        <div className="drawer-data "  style={{ padding: '40px' }}>
+          <span className="a" style={{ color: 'orange', fontWeight: 'bold' }}>About me</span><br></br>
+          <span className="b" style={{ color: '#213b52', fontWeight: 'bold',paddingTop:'85px' }}>Resume</span><br></br>
           <span className="c" style={{ color: '#213b52', fontWeight: 'bold' }}>Portfolio</span><br></br>
           <span className="d" style={{ color: '#213b52', fontWeight: 'bold' }}>Contact me</span><br></br>
         </div>
@@ -46,19 +43,19 @@ const Navbar = () => {
         <img src={Logow} width="120" height="40" />
       </div>
       <div className='middle'>
-        <span className="a" style={{ color: 'orange', fontWeight: 'bold' }}>About me</span>
-        <span className="b" style={{ color: '#213b52', fontWeight: 'bold' }}>Resume</span>
-        <span className="c" style={{ color: '#213b52', fontWeight: 'bold' }}>Portfolio</span>
-        <span className="d" style={{ color: '#213b52', fontWeight: 'bold' }}>Contact me</span>
+        <span className="a active" ><a href="#about">About</a></span>
+        <span className="b " ><a href="#resume">Resume</a></span>
+        <span className="c" ><a href="#portfolio">Portfolio</a></span>
+        <span className="d" ><a href="#contact">Contact me</a></span>
       </div>
       <div className='my-resume '>
         <button type="button" class="btn btn-outline-warning download">
           My Resume <FaDownload />
         </button>
       </div>
-      <div>
+      <div className='menubtn'>
         <Button onClick={topDrawer('right', true)}>
-          <div className='menu'><CgMenuMotion size={40} style={{ color: 'orange' }} /></div>
+          <div className='menu'><CgMenuMotion size={25} style={{ color: 'orange' }} /></div>
         </Button>
         <Drawer
           anchor="right"
