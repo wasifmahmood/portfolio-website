@@ -1,4 +1,4 @@
-import Logow from '../image/Logow.png'
+import NLogo from '../image/NLogo.png'
 import { FaDownload } from 'react-icons/fa';
 import { CgMenuMotion } from 'react-icons/cg';
 import './Navbar.css';
@@ -28,11 +28,11 @@ const Navbar = () => {
       onKeyDown={topDrawer(anchor, false)}
     >
       <List>
-        <div className="drawer-data "  style={{ padding: '40px' }}>
-          <span className="a" style={{ color: 'orange', fontWeight: 'bold' }}>About me</span><br></br>
-          <span className="b" style={{ color: '#213b52', fontWeight: 'bold',paddingTop:'85px' }}>Resume</span><br></br>
-          <span className="c" style={{ color: '#213b52', fontWeight: 'bold' }}>Portfolio</span><br></br>
-          <span className="d" style={{ color: '#213b52', fontWeight: 'bold' }}>Contact me</span><br></br>
+        <div className="drawer-data " style={{ padding: '40px' }}>
+          <a style={{ color: 'orange' }} href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
         </div>
       </List>
     </Box>
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <div className="Navbar p-2 rounded d-flex justify-content-between" style={{ backgroundColor: '#cfd9f8 ' }}>
       <div className='logo'  >
-        <img src={Logow} width="120" height="40" />
+        <img src={NLogo} width="120" height="40" />
       </div>
       <div className='middle'>
         <span className="a active" ><a href="#about">About</a></span>

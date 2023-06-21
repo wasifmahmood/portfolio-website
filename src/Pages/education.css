@@ -4,28 +4,46 @@
     text-align: start;
     padding-left: 50px;
 }
-.head{
+
+
+.head {
     flex: 3;
 }
-.bottom{
-    flex: 5;
-    padding-top: 10px;
+
+.info {
+    display: flex;
+    padding-top: 2rem;
 }
+
+.bottom {
+    flex: 5;
+    /* padding-top: 10px; */
+}
+
 @media (max-width:360px) {
     .data {
         padding: 10px;
         width: 100%;
+        padding-top: 2rem;
+    }
+
+    .data.h3 {
+        font-Size: 16px
     }
 
     .info {
         flex-direction: column;
         width: 100%;
+        padding-top: 10px;
     }
 
-    .head,
+    .head {
+
+        text-align: justify;
+    }
+
     .bottom {
-        /* flex-direction: row;
-        width: 100%; */
+        padding-top: 2rem;
         text-align: justify;
     }
 }

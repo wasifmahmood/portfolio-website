@@ -17,9 +17,10 @@
 
 
 }
-.image{
+
+.image {
     width: 70%;
-    
+
 }
 
 .desgination {
@@ -43,19 +44,16 @@
         order: -1;
 
     }
-    /* .image{
-        width: 70%;
-        
-    } */
-    
+
     .detail {
         text-align: justify;
         padding-top: 0px;
 
     }
 
-    /* .description {
-        font-size: normal;
+    .Top {
+        padding-left: 3rem;
 
-    } */
+
+    }
 }

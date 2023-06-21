@@ -30,14 +30,18 @@ const Contact = () => {
         </div>
         <div className='form right'>
           <form>
-            <label style={{ color: 'orange', marginBottom: '10px' }}>Full Name</label><br></br>
-            <TextField id="Name" label="Enter Your Full Name" variant="standard" color='warning' /><br></br>
-            <label style={{ color: 'orange', marginTop: '20px' }}>Email Address</label><br></br>
-            <TextField id="Email" label="Enter Your Email Address" variant="standard" color='warning' /><br></br>
-            <label style={{ color: 'orange', marginTop: '20px' }}>Your Message</label><br></br>
-            <TextField id="Message" label="Enter Your Details" variant="standard" color='warning' />
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <label style={{ color: 'orange',fontWeight:'bold' }}>Full Name</label>
+              <TextField id="Name" label="Enter Your Full Name" variant="standard" color='warning' />
+
+              <label style={{ color: 'orange', marginTop: '20px',fontWeight:'bold' }}>Email Address</label>
+              <TextField id="Email" label="Enter Your Email Address" variant="standard" color='warning' />
+
+              <label style={{ color: 'orange', marginTop: '20px',fontWeight:'bold' }}>Your Message</label>
+              <TextField id="Message" label="Enter Your Details" variant="standard" color='warning' />
+            </div>
           </form>
-          <div className='btn' style={{ paddingTop: '30px' }}>
+          <div className='btn' style={{ paddingTop: '3rem', display: 'flex', justifyContent: 'center' }}>
             <button type="button" className="btn btn-dark" style={{ borderRadius: '30px', backgroundColor: '#213b52' }} >Send Message</button>
           </div>
         </div>

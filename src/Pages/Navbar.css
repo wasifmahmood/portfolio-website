@@ -12,7 +12,6 @@
 .middle {
     align-items: center;
     display: flex;
-    font-Weight: bold;
 }
 
 .middle span {
@@ -22,6 +21,7 @@
 .middle span a {
     color: #213b52;
     text-decoration: none;
+    font-size: 16px;
 
 }
 
@@ -31,7 +31,6 @@
 
 .middle span.active a {
     color: orange;
-    font-weight: bold;
 }
 
 .a,
@@ -46,15 +45,22 @@
     padding-right: 10px;
 }
 
-.drawer-data.a.b.c.d {
-    padding-top: 10px;
+.drawer-data a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #213b52;
+    display: block;
+    font-weight: bold;
 }
 
+.drawer-data a:hover {
+    color: orange;
+}
 
 @media (min-width:768px) {
     .menubtn {
         display: none;
-        /* visibility: hidden; */
     }
 }
 

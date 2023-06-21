@@ -1,21 +1,21 @@
 .Contact {
     padding-top: 4rem;
-
+    padding-bottom: 4rem;
 }
 
 .footer {
     text-align: start;
     justify-content: space-between;
+    padding-top: 1rem;
 }
 
 .left {
     flex: 4;
-    
+
 }
 
 .header {
     color: #213b52;
-    /* padding-Right:60px; */
     font-weight: bold;
     font-size: 22px;
 }
@@ -41,6 +41,8 @@
 
 .right {
     flex: 4;
+    padding-left: 4rem;
+    display: block;
 }
 
 
@@ -54,16 +56,20 @@
         flex-direction: column;
         width: 100%;
     }
+
     .f-text {
         padding: 30px;
         align-items: center;
-        
+
     }
+
     .right {
         padding: 3rem;
     }
-    .header{
+
+    .header {
         text-align: left;
-        
+        padding-top: 2rem;
+
     }
 }
