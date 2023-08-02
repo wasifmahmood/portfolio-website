@@ -2,15 +2,16 @@ import NLogo from '../image/NLogo.png'
 import { FaDownload } from 'react-icons/fa';
 import { CgMenuMotion } from 'react-icons/cg';
 import './Navbar.css';
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import { COLORS } from '../constants/colors';
 
 
 const Navbar = () => {
+  const pdfref = useRef();
   const [state, setState] = React.useState({
     right: false,
   });
@@ -28,25 +29,32 @@ const Navbar = () => {
       onKeyDown={topDrawer(anchor, false)}
     >
       <List>
-        <div className="drawer-data " style={{ padding: '40px' }}>
-          <a style={{ color: 'orange' }} href="#about">About</a>
-          <a href="#resume">Resume</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
+        <div className="drawer-data "
+          style={{ padding: '40px' }}
+        >
+          <a style={{ color: COLORS.primary }} href="#about">About</a>
+          <a style={{ color: COLORS.secondary }} href="#resume">Resume</a>
+          <a style={{ color: COLORS.secondary }} href="#portfolio">Portfolio</a>
+          <a style={{ color: COLORS.secondary }} href="#contact">Contact</a>
+          <div className='my-resume '>
+            <button type="button" >
+              <FaDownload />
+            </button>
+          </div>
         </div>
       </List>
     </Box>
   );
   return (
-    <div className="Navbar p-2 rounded d-flex justify-content-between" style={{ backgroundColor: '#cfd9f8 ' }}>
+    <div className="Navbar p-2 rounded d-flex justify-content-between" style={{ backgroundColor: COLORS.back }}>
       <div className='logo'  >
         <img src={NLogo} width="120" height="40" />
       </div>
-      <div className='middle'>
-        <span className="a active" ><a href="#about">About</a></span>
-        <span className="b " ><a href="#resume">Resume</a></span>
-        <span className="c" ><a href="#portfolio">Portfolio</a></span>
-        <span className="d" ><a href="#contact">Contact me</a></span>
+      <div className='middle' >
+        <span className="a active" ><a style={{ color: COLORS.primary }} href="#about">About</a></span>
+        <span className="b"><a style={{ color: COLORS.secondary }} href="#resume">Resume</a></span>
+        <span className="c"><a style={{ color: COLORS.secondary }} href="#portfolio">Portfolio</a></span>
+        <span className="d"><a style={{ color: COLORS.secondary }} href="#contact">Contact me</a></span>
       </div>
       <div className='my-resume '>
         <button type="button" class="btn btn-outline-warning download">
@@ -55,7 +63,7 @@ const Navbar = () => {
       </div>
       <div className='menubtn'>
         <Button onClick={topDrawer('right', true)}>
-          <div className='menu'><CgMenuMotion size={25} style={{ color: 'orange' }} /></div>
+          <div className='menu'><CgMenuMotion size={25} style={{ color: COLORS.primary }} /></div>
         </Button>
         <Drawer
           anchor="right"
