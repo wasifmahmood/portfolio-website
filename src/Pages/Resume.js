@@ -10,8 +10,8 @@ const Resume = () => {
       <div className='container' >
         <div className='card' style={{ backgroundColor:COLORS.back, borderColor:COLORS.primary }}>
           <h3>Techlift Bootcamp Trainee</h3>
-          <span style={{ color:COLORS.primary }}>Mern Stack Developer</span>
-          <span style={{ color:COLORS.primary}}>(Oct2022-Jan2023)</span><br></br>
+          <span style={{ color:COLORS.primary,fontWeight:'bold',fontSize:'20px' }}>Mern Stack Developer</span>
+          <span style={{ color:COLORS.primary,fontWeight:'bold'}}>(Oct2022-Jan2023)</span><br></br>
           <p style={{ fontSize: '14px', color: COLORS.secondary }}>
             <h6> MERN Stack Bootcamp Learning Experience:</h6>
             <h6>ForntEnd</h6>
@@ -30,8 +30,8 @@ const Resume = () => {
         </div>
         <div className='card' style={{ backgroundColor:COLORS.back, borderColor:COLORS.primary }}>
           <h3>Cybex Solution</h3>
-          <span style={{ color:COLORS.primary }}>REACT-JS Forntend Developer</span>
-          <span style={{ color: COLORS.primary }}>(Mar2023-Present)</span><br></br>
+          <span style={{ color:COLORS.primary,fontWeight:'bold',fontSize:'20px' }}>REACT-JS Forntend Developer</span>
+          <span style={{ color: COLORS.primary,fontWeight:'bold' }}>(Mar2023-Present)</span><br></br>
           <p style={{ fontSize: '14px', color:COLORS.secondary }}>As a React JS Developer, my main responsibility is to develop user interface components using React.js. i collaborate with the team to implement features, optimize performance, and ensure code quality. Strong proficiency in JavaScript, knowledge of React.js principles, and familiarity with front-end tools are essential for success in this role.<br></br>
             • Develop and implement user interface components using React.js and related technologies.<br></br>
             • Collaborate with the development team to design and enhance features, ensuring code quality and best practices.<br></br>
