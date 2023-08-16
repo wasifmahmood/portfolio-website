@@ -2,16 +2,14 @@ import NLogo from '../image/NLogo.png'
 import { FaDownload } from 'react-icons/fa';
 import { CgMenuMotion } from 'react-icons/cg';
 import './Navbar.css';
-import React, { useRef } from "react";
+import React from "react";
 import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import { COLORS } from '../constants/colors';
 
-
 const Navbar = () => {
-  const pdfref = useRef();
   const [state, setState] = React.useState({
     right: false,
   });

@@ -3,8 +3,42 @@ import { MdEmail, MdSettingsPhone } from 'react-icons/md';
 import { ImLocation2 } from 'react-icons/im';
 import { TextField } from '@mui/material';
 import { COLORS } from '../constants/colors';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [userData, setUserData] = useState({
+    FullName: '',
+    PhoneNumber:'',
+    Email: '',
+    Message: '',
+  });
+  let name, value;
+  const postuserData = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+    setUserData({ ...userData, [name]: value });
+  };
+  // connect with firebase
+  const SendMessage = async (e) => {
+    e.preventDefault();
+    const { FullName, PhoneNumber,Email, Message } = userData;
+    const res = fetch('https://portfolio-wasif-mahmood-default-rtdb.firebaseio.com/userDataStore.json', {
+      method: 'POST',
+      headers: {
+        'Content-Tpye': 'application/json',
+      },
+      body: JSON.stringify({
+        FullName, PhoneNumber, Email, Message
+      })
+    }
+    );
+    if (res) {
+      setUserData({ FullName: '', PhoneNumber:'', Email: '', Message: '', })
+      alert('Data Stored');
+    } else {
+      alert('Please Fill the Data');
+    }
+  };
   return (
     <div className="Contact" >
       <div className='heading'>
@@ -32,17 +66,54 @@ const Contact = () => {
           <form>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <label style={{ color: COLORS.primary, fontWeight: 'bold' }}>Full Name</label>
-              <TextField id="Name" label="Enter Your Full Name" variant="standard" color='warning' />
-
+              <TextField
+                id="Name"
+                name='FullName'
+                label="Enter Your Full Name"
+                variant="standard"
+                color='warning'
+                value={userData.FullName}
+                onChange={postuserData}
+              />
+              <label style={{ color: COLORS.primary, marginTop: '20px',fontWeight: 'bold' }}>Phone Number</label>
+              <TextField
+                id="PhoneNumber"
+                name='PhoneNumber'
+                label="Enter Your Phone Number"
+                variant="standard"
+                color='warning'
+                value={userData.PhoneNumber}
+                onChange={postuserData}
+              />
               <label style={{ color: COLORS.primary, marginTop: '20px', fontWeight: 'bold' }}>Email Address</label>
-              <TextField id="Email" label="Enter Your Email Address" variant="standard" color='warning' />
+              <TextField
+                id="Email"
+                name='Email'
+                label="Enter Your Email Address"
+                variant="standard"
+                color='warning'
+                value={userData.Email}
+                onChange={postuserData}
+              />
 
               <label style={{ color: COLORS.primary, marginTop: '20px', fontWeight: 'bold' }}>Your Message</label>
-              <TextField id="Message" label="Enter Your Details" variant="standard" color='warning' />
+              <TextField
+                id="Message"
+                name='Message'
+                label="Enter Your Details"
+                variant="standard"
+                color='warning'
+                value={userData.Message}
+                onChange={postuserData}
+              />
             </div>
           </form>
-          <div className='btn' style={{ paddingTop: '3rem', display: 'flex', justifyContent: 'center' }}>
-            <button type="button" className="btn btn-dark" style={{ borderRadius: '30px', backgroundColor: COLORS.secondary }} >Send Message</button>
+          <div className='btn'
+            style={{ paddingTop: '3rem', display: 'flex', justifyContent: 'center' }}>
+            <button type="button" className="btn btn-dark"
+              style={{ borderRadius: '30px', backgroundColor: COLORS.secondary }}
+              onClick={SendMessage}
+            >Send Message</button>
           </div>
         </div>
       </div >
